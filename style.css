@@ -1,0 +1,570 @@
+/* ===== Base ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ===== Nav ===== */
+.nav {
+    width: 100%;
+    padding: 20px 0 0;
+}
+
+.nav__li {
+    display: flex;
+    list-style: none;
+    justify-content: end;
+    align-items: center;
+}
+
+.nav__item {
+    margin: 0 15px;
+}
+
+.nav__link {
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #222;
+    transition: color .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.nav__link:hover {
+    color: #0ae;
+}
+
+/* ===== Perfil ===== */
+.perfil {
+    margin-top: 0;
+}
+
+.perfil__contenedor {
+    margin: 1rem auto;
+    display: block;
+    padding-left: 18px;
+}
+
+.perfil__borde {
+    display: flex;
+    margin: auto;
+    width: 160px;
+    height: 160px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 3px solid #0ae;
+}
+
+.perfil img {
+    width: 96%;
+    height: 96%;
+    border-radius: 50%;
+    align-items: center;
+}
+
+.perfil__nombre {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 5px 0 2px;
+    color: #222;
+}
+
+.perfil__ocupacion {
+    text-align: center;
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* ===== Estadísticas ===== */
+.estadistica {
+    width: 30%;
+    display: flex;
+    margin: auto;
+    padding-left: 18px;
+    justify-content: space-around;
+}
+
+.estadistica__item {
+    width: 30%;
+    text-align: center;
+    margin: auto;
+}
+
+.estadistica__numero {
+    color: #222;
+    font-size: 1.6rem;
+}
+
+.estadistica__descripcion {
+    font-weight: bold;
+    font-size: .9rem;
+    color: #777;
+}
+
+/* ===== Redes ===== */
+.contacto {
+    width: 100%;
+    display: flex;
+    margin: 2rem auto 0;
+    justify-content: center;
+}
+
+.contacto__icono {
+    margin-left: 17px;
+}
+
+.contacto__icono a img {
+    width: 30px;
+}
+
+/* ===== Tabs / secciones ===== */
+.secciones {
+    width: 90vw;
+    margin: auto;
+    text-align: center;
+}
+
+.secciones__contenedor {
+    display: inline-flex;
+    margin: 20px 0;
+    border-top: 2px solid #ccc;
+}
+
+.secciones__item,
+.secciones__item-seleccionado {
+    padding: 15px 50px;
+}
+
+.secciones__contenedor a {
+    text-decoration: none;
+    color: #888;
+    font-size: 13px;
+    font-weight: 600;
+    transition: color .1s ease, box-shadow .1s ease, border-color .1s ease;
+}
+
+.secciones__contenedor a:hover {
+    color: #0ae;
+    border-bottom: 1px solid #0ae;
+    box-shadow: 0 .9px 0 0 #0ae;
+}
+
+.secciones__item-seleccionado a {
+    color: #0ae;
+    border-bottom: 1px solid #0ae;
+    box-shadow: 0 .9px 0 0 #0ae;
+}
+
+/* ===== Sobre mí ===== */
+.informacion__titulo {
+    color: #888;
+    font-size: .9rem;
+    text-align: center;
+}
+
+.informacion__subtitulo {
+    color: #0ae;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.informacion__contenedor {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+}
+
+.informacion__img {
+    width: 29%;
+    font-size: .99rem;
+}
+
+.informacion__img img {
+    width: 70%;
+    border-radius: 15px;
+    transition: transform .2s ease;
+}
+
+.informacion__img img:hover {
+    transform: translateY(-2px);
+}
+
+.informacion__contenido {
+    width: 30%;
+    min-height: 460px;
+    line-height: 1.5;
+    text-align: center;
+    margin-left: -50px;
+}
+
+.informacion__items {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 12px;
+}
+
+.informacion__item {
+    background-color: #eee;
+    margin: auto;
+    height: 120px;
+    width: 120px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.informacion__item i {
+    margin-top: 14px;
+    color: #0ae;
+    font-size: 1.2rem;
+    padding: 10px 0;
+}
+
+.informacion__item h3 {
+    color: #222;
+    font-size: 1rem;
+}
+
+.informacion__item p {
+    color: #555;
+    font-size: .8rem;
+}
+
+.informacion__descripcion {
+    text-align: center;
+}
+
+.informacion__boton {
+    color: #eee;
+    background-color: #0ae;
+    border-radius: 10px;
+    margin-top: 15px;
+    padding: 13px 20px;
+    border: none;
+    font-size: 1rem;
+    box-shadow: 0 0 5px 0 #0ae;
+    transition: background .2s ease, box-shadow .2s ease;
+}
+
+.informacion__boton:hover {
+    background-color: #08d;
+    box-shadow: 0 0 5px 0 #08d;
+}
+
+/* ===== Proyectos (título) ===== */
+.proyectos {
+    color: #0ae;
+    font-size: .8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ===== Skills ===== */
+.habilidades__contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 52%;
+    margin: auto;
+    gap: 20px;
+}
+
+.habilidades__columna {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+
+.habilidades__titulo {
+    grid-column: 1 / 3;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.habilidades__item {
+    font-size: 10px;
+    margin: 15px 0 15px 50px;
+    align-items: center;
+}
+
+.habilidades__item h2 {
+    font-size: 1rem;
+}
+
+.habilidades__item h3 {
+    font-size: .9rem;
+    margin: -31px 0 0 40px;
+}
+
+.habilidades__item i {
+    font-size: 1.8rem;
+    color: #0ae;
+}
+
+.habilidades__item span {
+    display: block;
+    margin: 5px 0 0 40px;
+    color: #777;
+    font-size: .8rem;
+}
+
+/* ===== Formulario ===== */
+.formulario {
+    width: 90%;
+    max-width: 600px;
+    margin: 10px auto 30px;
+    background-color: #eee;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 170, 238, .1);
+}
+
+.formulario__titulo {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #0ae;
+}
+
+.formulario__form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario__input,
+.formulario__textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border .3s ease;
+}
+
+.formulario__input:focus,
+.formulario__textarea:focus {
+    border: 1px solid #0ae;
+}
+
+.formulario__textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.formulario__boton {
+    background-color: #0ae;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background .3s ease;
+}
+
+.formulario__boton:hover {
+    background-color: #08d;
+}
+
+/* ===== Tabs controlados por JS ===== */
+#sobremi,
+#proyectos,
+#skills,
+#contacto {
+    display: none;
+}
+
+#sobremi.activo,
+#proyectos.activo,
+#skills.activo,
+#contacto.activo {
+    display: block;
+}
+
+/* ===== Footer ===== */
+.footer {
+    width: 100%;
+    text-align: right;
+    padding: 13px 40px;
+    background: linear-gradient(to top, #f3f3f3, transparent);
+    margin-top: auto;
+}
+
+.footer__texto {
+    font-size: .8rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+    .estadistica {
+        width: 50%;
+    }
+
+    .habilidades__contenedor {
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav__li {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav__item {
+        margin: 10px 0;
+    }
+
+    .secciones__contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .perfil__contenedor {
+        padding-left: 0;
+    }
+
+    .estadistica {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .estadistica__item {
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    .informacion__contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .informacion__img {
+        width: 90%;
+        margin: 0 auto 20px;
+    }
+
+    .informacion__contenido {
+        width: 90%;
+        margin-left: 0;
+    }
+
+    .habilidades__contenedor {
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+
+    .habilidades__columna {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .informacion__items {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .informacion__item {
+        width: 80%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav__link {
+        font-size: .9rem;
+    }
+
+    .perfil__borde {
+        width: 120px;
+        height: 120px;
+    }
+
+    .perfil__nombre {
+        font-size: 1.5rem;
+    }
+
+    .estadistica__numero {
+        font-size: 1.4rem;
+    }
+
+    .informacion__subtitulo {
+        font-size: 1rem;
+    }
+
+    .informacion__contenido {
+        min-height: auto;
+    }
+
+    .habilidades__item {
+        margin-left: 20px;
+    }
+
+    .footer {
+        text-align: center;
+    }
+}
+
+/* ===== Fondo de BEAMS diagonales sutil en toda la página ===== */
+#beams {
+    position: fixed;
+    inset: 0;
+    /* cubre toda la pantalla */
+    pointer-events: none;
+    /* no bloquea clics */
+    z-index: 0;
+    /* detrás del contenido */
+    /* 3 beams: lavanda, rosa, celeste */
+    background:
+        linear-gradient(135deg, rgba(179, 136, 235, 0.14) 0%, rgba(179, 136, 235, 0.0) 65%),
+        linear-gradient(225deg, rgba(255, 145, 185, 0.14) 0%, rgba(255, 145, 185, 0.0) 65%),
+        linear-gradient(45deg, rgba(0, 174, 238, 0.14) 0%, rgba(0, 174, 238, 0.0) 65%);
+    background-size: 200% 200%;
+    animation: beams-breathe 58s ease-in-out infinite;
+    /* Suavizado extra (opcional): desenfoque muy leve */
+    filter: saturate(110%);
+}
+
+/* Respiración lentísima del fondo */
+@keyframes beams-breathe {
+    0% {
+        background-position: 0% 0%, 100% 100%, 0% 100%;
+    }
+
+    50% {
+        background-position: 100% 100%, 0% 0%, 100% 0%;
+    }
+
+    100% {
+        background-position: 0% 0%, 100% 100%, 0% 100%;
+    }
+}
+
+/* Respeta accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    #beams {
+        animation: none;
+    }
+}
+
+/* Por si algún elemento tapa los beams, asegúrate de que tu contenido esté por encima */
+main,
+header,
+footer,
+.container,
+body>*:not(#beams) {
+    position: relative;
+    z-index: 1;
+}
