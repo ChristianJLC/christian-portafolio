@@ -45,7 +45,6 @@ img {
 .perfil__contenedor {
     margin: 1rem auto;
     display: block;
-    padding-left: 18px;
 }
 
 .perfil__borde {
@@ -83,7 +82,6 @@ img {
     width: 30%;
     display: flex;
     margin: auto;
-    padding-left: 18px;
     justify-content: space-around;
 }
 
@@ -112,7 +110,7 @@ img {
 }
 
 .contacto__icono {
-    margin-left: 17px;
+    margin: auto 8.5px;
 }
 
 .contacto__icono a img {
@@ -250,7 +248,9 @@ img {
 }
 
 .informacion__descripcion {
-    text-align: center;
+    text-align: left;
+    margin-bottom: 10px;
+    color: #555;
 }
 
 .informacion__boton {
@@ -274,7 +274,6 @@ img {
 .proyectos {
     width: 60%;
     margin: auto;
-    text-align: center;
 }
 
 .proyectos__titulo {
@@ -487,7 +486,8 @@ img {
     color: #222;
 }
 
-.modal__descripcion {
+.modal__descripcion-ul {
+    margin-left: 18px;
     font-size: 1rem;
     line-height: 1.7;
     color: #555;
@@ -525,6 +525,72 @@ img {
 .carousel__img.fade-out {
     opacity: 0;
 }
+
+
+
+
+
+
+
+
+.modal__acciones {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.modal__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: .95rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform .15s ease, box-shadow .15s ease, background .15s ease, border-color .15s ease;
+}
+
+/* Principal */
+.modal__btn--primary {
+    background: #111;
+    color: #fff;
+    border: 1px solid #111;
+    transition: 0.3s;
+}
+
+.modal__btn--primary:hover {
+    background: #555;
+}
+
+.modal__btn--secondary {
+    background: transparent;
+    color: #111;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+.modal__btn--secondary:hover {
+    background: #f5f5f5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .habilidades__contenedor {
     display: grid;
@@ -666,10 +732,6 @@ img {
     .secciones__contenedor {
         flex-direction: column;
         align-items: center;
-    }
-
-    .perfil__contenedor {
-        padding-left: 0;
     }
 
     .estadistica {

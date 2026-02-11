@@ -57,6 +57,9 @@
                     src="logos/logotipo-de-instagram.png" alt="instagram"></a></div>
         <div class="contacto__icono"><a href="https://github.com/ChristianJLC" target="_blank"><img
                     src="logos/signo-de-github.png" alt="github"></a></div>
+        <div class="contacto__icono"><a
+                href="https://wa.me/+51965337231?text=Hola%20quiero%20contactarte%20para%20hablar%20de%20un%20proyecto"
+                target="_blank"><img src="logos/whatsapp.png" alt="github"></a></div>
     </section>
 
     <section class="secciones">
@@ -89,16 +92,20 @@
                         <p>+5 Proyectos</p>
                     </div>
                     <div class="informacion__item">
-                        <i class="fa-solid fa-headset"></i>
-                        <h3>Soporte</h3>
-                        <p>En linea 24/7</p>
+                        <i class="fa-solid fa-brain"></i>
+                        <h3>Aprendizaje</h3>
+                        <p>Continuo</p>
                     </div>
                 </div>
-                <p class="informacion__descripcion">¡Hola! Soy Christian, apasionado del desarrollo web con 26 años de
-                    edad, estudiante de Ingeniería
-                    de Sistemas en la Universidad Tecnológica del Perú (UTP). Me encanta
-                    crear experiencias digitales atractivas y funcionales. Busco integrarme a un equipo donde pueda
-                    aportar, seguir aprendiendo y dar lo mejor de mí en cada proyecto.</p>
+                <p class="informacion__descripcion">Desarrollador Full Stack con enfoque en frontend UX/UI y backend con
+                    modelado de bases
+                    de datos.
+                    He construido aplicaciones web completas con autenticación, dashboards administrativos y control de
+                    datos en tiempo real utilizando Next.js, Node.js y PostgreSQL.
+                </p>
+                <p class="informacion__descripcion"> Busco una posición Junior donde pueda aportar soluciones sólidas y
+                    seguir fortaleciendo mis
+                    habilidades en arquitectura y desarrollo de software.</p>
                 <button class="informacion__boton" id="btn-contactame">Contactame</button>
             </div>
         </div>
@@ -108,6 +115,7 @@
         <h2 class="informacion__titulo">trabajos y proyectos</h2>
         <h3 class="informacion__subtitulo">Proyectos</h3>
         <div class="proyectos__grid">
+
             <article class="proyecto" data-modal="modalCoffe"
                 data-images="proyectos/thecoffeshop/coffemodal1.png|proyectos/thecoffeshop/coffemodal2.png|proyectos/thecoffeshop/coffemodal3.png|proyectos/thecoffeshop/coffemodal4.png|proyectos/thecoffeshop/coffemodal5.png">
                 <div class="proyecto__thumb">
@@ -117,14 +125,21 @@
                 <div class="proyecto__body">
                     <h3 class="proyecto__nombre">The Coffee Shop</h3>
                     <p class="proyecto__desc">
-                        web full stack con flujo completo de compras: Producto, carrito, Checkout.
+                        E-commerce full stack para una cafetería con flujo completo de compra.
+                        Gestión de productos, carrito persistente y checkout funcional, enfocado en una experiencia de
+                        usuario clara y continua.
                     </p>
 
                     <ul class="proyecto__tags">
                         <li>Node.js</li>
+                        <li>Express.js</li>
                         <li>PostgreSQL</li>
-                        <li>Html</li>
-                        <li>...</li>
+                        <li>APIs REST</li>
+                        <li>JavaScript</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Git</li>
+                        <li>UX/UI</li>
                     </ul>
                 </div>
             </article>
@@ -138,14 +153,21 @@
                 <div class="proyecto__body">
                     <h3 class="proyecto__nombre">Web de inventario</h3>
                     <p class="proyecto__desc">
-                        Inventario UX/UI con credenciales, dashboard y gestión de productos.
+                        Sistema web de inventario con autenticación y dashboard administrativo.
+                        Control de stock en tiempo real, gestión de productos, compras y ventas, orientado a entornos
+                        comerciales.
                     </p>
 
                     <ul class="proyecto__tags">
+                        <li>Next.js</li>
+                        <li>TypeScript</li>
+                        <li>Prisma ORM</li>
+                        <li>PostgreSQL</li>
+                        <li>NextAuth</li>
+                        <li>API Routes</li>
+                        <li>Zod</li>
+                        <li>Git</li>
                         <li>UX/UI</li>
-                        <li>Tailwind</li>
-                        <li>Node.js</li>
-                        <li>...</li>
                     </ul>
                 </div>
             </article>
@@ -159,12 +181,18 @@
                 <div class="proyecto__body">
                     <h3 class="proyecto__nombre">Reservación de salas</h3>
                     <p class="proyecto__desc">
-                        API Rest para reservas de sales con autenticacion JWT.
+                        API REST para la gestión de reservas de salas.
+                        Manejo de usuarios, disponibilidad y reservas con autenticación segura y arquitectura MVC.
                     </p>
 
                     <ul class="proyecto__tags">
                         <li>Node.js</li>
-                        <li>Firebase</li>
+                        <li>Express.js</li>
+                        <li>MongoDB</li>
+                        <li>APIs Rest</li>
+                        <li>JWT/Middleware</li>
+                        <li>Arquitectura MVC</li>
+                        <li>Git</li>
                     </ul>
                 </div>
             </article>
@@ -192,27 +220,46 @@
 
                     <div class="modal__right">
                         <h3 class="modal__titulo">The Coffee Shop</h3>
+                        <ul class="modal__descripcion-ul">
+                            <li>E-commerce full stack para una cafetería con flujo completo de compra
+                                (productos, carrito y checkout).</li>
+                            <li>Backend con Node.js y Express, exponiendo APIs REST para la gestión de
+                                pedidos y órdenes.</li>
+                            <li>Integré PostgreSQL como base de datos relacional para la gestión de productos y pedidos.
+                            </li>
+                            <li>Carrito de compras persistente usando LocalStorage, manteniendo el estado
+                                entre vistas.</li>
+                            <li>Gestioné rutas y navegación en producción para vistas HTML.</li>
+                            <li>Manejo de validaciones y errores en frontend y backend para asegurar la
+                                integridad del flujo de compra.</li>
 
-                        <p class="modal__descripcion">
-                            Proyecto full stack orientado a e-commerce gastronómico. Incluye flujo completo de compras,
-                            autenticación, carrito persistente y checkout optimizado.
-                        </p>
-
-                        <p class="modal__descripcion">
-                            El sistema permite gestionar productos, categorías y pedidos desde el lado administrativo.
-                        </p>
-
+                        </ul>
                         <h4 class="modal__subtitulo">Tecnologías</h4>
                         <ul class="modal__tech">
                             <li>Node.js</li>
+                            <li>Express.js</li>
                             <li>PostgreSQL</li>
-                            <li>Express</li>
-                            <li>HTML / CSS</li>
+                            <li>APIs REST</li>
+                            <li>JavaScript</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Git</li>
                         </ul>
+                        <div class="modal__acciones">
+                            <a class="modal__btn modal__btn--primary" href="https://thecoffeshop.onrender.com/"
+                                target="_blank" rel="noopener">
+                                Ir a producción
+                            </a>
+                            <a class="modal__btn modal__btn--secondary"
+                                href="https://github.com/ChristianJLC/TheCoffeShop" target="_blank" rel="noopener">
+                                Ver código
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="modal" id="modalInventario">
             <div class="modal__overlay"></div>
 
@@ -233,25 +280,47 @@
                     <div class="modal__right">
                         <h3 class="modal__titulo">Web de inventario</h3>
 
-                        <p class="modal__descripcion">
-                            Proyecto orientado a inventario con autenticación, dashboard y gestión de productos.
-                        </p>
-
-                        <p class="modal__descripcion">
-                            Permite administrar productos, proveedores, categorías y ventas desde un panel.
-                        </p>
+                        <ul class="modal__descripcion-ul">
+                            <li>Sistema web de inventario con control de stock en tiempo real.</li>
+                            <li>Utilice Next.js y TypeScript utilizando App Router para la gestión de vistas y rutas
+                                dinámicas.</li>
+                            <li>Backend desarrollado con API Routes y arquitectura modular para operaciones CRUD.</li>
+                            <li>Integré PostgreSQL con Prisma ORM, modelando relaciones entre productos, compras, ventas
+                                y usuarios.</li>
+                            <li>Manejo autenticación de usuarios con NextAuth y protección de rutas mediante
+                                middleware.</li>
+                            <li>Validaciones con Zod y manejo de errores para asegurar la integridad de compras
+                                y ventas.</li>
+                            <li>Sistema desplegado en producción como versión demo para evaluación funcional -
+                                Credenciales en README.</li>
+                        </ul>
 
                         <h4 class="modal__subtitulo">Tecnologías</h4>
                         <ul class="modal__tech">
-                            <li>Node.js</li>
+                            <li>Next.js</li>
+                            <li>TypeScript</li>
+                            <li>Prisma ORM</li>
                             <li>PostgreSQL</li>
-                            <li>Express</li>
-                            <li>HTML / CSS</li>
+                            <li>NextAuth</li>
+                            <li>API Routes</li>
+                            <li>Zod</li>
+                            <li>Git</li>
                         </ul>
+                        <div class="modal__acciones">
+                            <a class="modal__btn modal__btn--primary" href="https://web-vp32.onrender.com/"
+                                target="_blank" rel="noopener">
+                                Ir a producción
+                            </a>
+                            <a class="modal__btn modal__btn--secondary" href="https://github.com/ChristianJLC/web"
+                                target="_blank" rel="noopener">
+                                Ver código
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="modal" id="modalReserva">
             <div class="modal__overlay"></div>
 
@@ -272,21 +341,29 @@
                     <div class="modal__right">
                         <h3 class="modal__titulo">Reservación de salas</h3>
 
-                        <p class="modal__descripcion">
-                            API REST para gestionar reservas con autenticación JWT y control de acceso.
-                        </p>
-
-                        <p class="modal__descripcion">
-                            Permite crear salas, usuarios y reservas, validando disponibilidad y permisos.
-                        </p>
+                        <ul class="modal__descripcion-ul">
+                            <li>API REST para gestión de usuarios, salas y reservas.</li>
+                            <li>Modelado de datos con MongoDB.</li>
+                            <li>Autenticación con JWT y middleware.</li>
+                            <li>Arquitectura MVC y uso de variables de entorno.</li>
+                        </ul>
 
                         <h4 class="modal__subtitulo">Tecnologías</h4>
                         <ul class="modal__tech">
                             <li>Node.js</li>
-                            <li>Express</li>
-                            <li>Firebase</li>
-                            <li>JWT</li>
+                            <li>Express.js</li>
+                            <li>MongoDB</li>
+                            <li>APIs Rest</li>
+                            <li>JWT/Middleware</li>
+                            <li>Arquitectura MVC</li>
+                            <li>Git</li>
                         </ul>
+                        <div class="modal__acciones">
+                            <a class="modal__btn modal__btn--primary" href="https://github.com/ChristianJLC/bookly-js"
+                                target="_blank" rel="noopener">
+                                Ver código
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
