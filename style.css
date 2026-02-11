@@ -1,4 +1,3 @@
-/* ===== Base ===== */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +10,6 @@ img {
     display: block;
 }
 
-/* ===== Nav ===== */
 .nav {
     width: 100%;
     padding: 20px 0 0;
@@ -20,7 +18,7 @@ img {
 .nav__li {
     display: flex;
     list-style: none;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -40,7 +38,6 @@ img {
     color: #0ae;
 }
 
-/* ===== Perfil ===== */
 .perfil {
     margin-top: 0;
 }
@@ -66,7 +63,6 @@ img {
     width: 96%;
     height: 96%;
     border-radius: 50%;
-    align-items: center;
 }
 
 .perfil__nombre {
@@ -83,7 +79,6 @@ img {
     color: #333;
 }
 
-/* ===== Estadísticas ===== */
 .estadistica {
     width: 30%;
     display: flex;
@@ -109,7 +104,6 @@ img {
     color: #777;
 }
 
-/* ===== Redes ===== */
 .contacto {
     width: 100%;
     display: flex;
@@ -125,7 +119,6 @@ img {
     width: 30px;
 }
 
-/* ===== Tabs / secciones ===== */
 .secciones {
     width: 90vw;
     margin: auto;
@@ -163,7 +156,22 @@ img {
     box-shadow: 0 .9px 0 0 #0ae;
 }
 
-/* ===== Sobre mí ===== */
+#sobremi,
+#proyectos,
+#skills,
+#contacto {
+    display: none;
+}
+
+
+#sobremi.activo,
+#proyectos.activo,
+#skills.activo,
+#contacto.activo {
+    display: block;
+}
+
+
 .informacion__titulo {
     color: #888;
     font-size: .9rem;
@@ -255,6 +263,7 @@ img {
     font-size: 1rem;
     box-shadow: 0 0 5px 0 #0ae;
     transition: background .2s ease, box-shadow .2s ease;
+    cursor: pointer;
 }
 
 .informacion__boton:hover {
@@ -262,15 +271,261 @@ img {
     box-shadow: 0 0 5px 0 #08d;
 }
 
-/* ===== Proyectos (título) ===== */
 .proyectos {
-    color: #0ae;
-    font-size: .8rem;
-    margin-bottom: 20px;
+    width: 60%;
+    margin: auto;
     text-align: center;
 }
 
-/* ===== Skills ===== */
+.proyectos__titulo {
+    color: #0ae;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.proyectos__subtitulo {
+    color: #666;
+    font-size: .95rem;
+    margin-bottom: 22px;
+}
+
+.proyectos__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    align-items: stretch;
+}
+
+.proyecto {
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 14px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+    transition: transform .3s ease, box-shadow .18s ease;
+}
+
+.proyecto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(3, 3, 3, 0.10);
+}
+
+.proyecto__thumb {
+    background: #f6f6f6;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.proyecto__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.proyecto__body {
+    padding: 14px 14px 16px;
+}
+
+.proyecto__nombre {
+    font-size: 1.05rem;
+    color: #222;
+    margin-bottom: 6px;
+}
+
+.proyecto__desc {
+    color: #555;
+    font-size: .92rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.proyecto__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.proyecto__tags li {
+    font-size: .78rem;
+    padding: 6px 10px;
+    background: #eef9fd;
+    color: #067a9a;
+    border: 1px solid rgba(0, 170, 238, .25);
+    border-radius: 999px;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    z-index: 9999;
+}
+
+.modal.activo {
+    display: block;
+}
+
+.modal__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .6);
+}
+
+.modal__box {
+    position: relative;
+    width: 90vw;
+    max-width: 1200px;
+    height: 80vh;
+    margin: 5vh auto;
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 30px 90px rgba(0, 0, 0, .35);
+}
+
+.modal__close {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .15);
+}
+
+.modal__content {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    height: 100%;
+}
+
+.modal__left {
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+}
+
+.carousel__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+}
+
+.carousel__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    background: rgba(0, 0, 0, .45);
+    color: #fff;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+}
+
+.carousel__btn:hover {
+    background: rgba(0, 0, 0, .65);
+}
+
+.carousel__prev {
+    left: 14px;
+}
+
+.carousel__next {
+    right: 14px;
+}
+
+.carousel__dots {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    z-index: 2;
+}
+
+.carousel__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, .6);
+    background: rgba(255, 255, 255, .25);
+    cursor: pointer;
+}
+
+.carousel__dot.activo {
+    background: rgba(255, 255, 255, .9);
+}
+
+.modal__right {
+    padding: 30px 32px;
+    overflow-y: auto;
+}
+
+.modal__titulo {
+    font-size: 1.6rem;
+    margin-bottom: 14px;
+    color: #222;
+}
+
+.modal__descripcion {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 14px;
+}
+
+.modal__subtitulo {
+    margin-top: 18px;
+    font-size: 1rem;
+    color: #222;
+}
+
+.modal__tech {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.modal__tech li {
+    font-size: .8rem;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #eef9fd;
+    color: #067a9a;
+    border: 1px solid rgba(0, 170, 238, .25);
+}
+
+.carousel__img {
+    transition: opacity .35s cubic-bezier(.4, 0, .2, 1);
+}
+
+.carousel__img.fade-out {
+    opacity: 0;
+}
+
 .habilidades__contenedor {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -297,10 +552,6 @@ img {
     align-items: center;
 }
 
-.habilidades__item h2 {
-    font-size: 1rem;
-}
-
 .habilidades__item h3 {
     font-size: .9rem;
     margin: -31px 0 0 40px;
@@ -318,7 +569,6 @@ img {
     font-size: .8rem;
 }
 
-/* ===== Formulario ===== */
 .formulario {
     width: 90%;
     max-width: 600px;
@@ -377,22 +627,6 @@ img {
     background-color: #08d;
 }
 
-/* ===== Tabs controlados por JS ===== */
-#sobremi,
-#proyectos,
-#skills,
-#contacto {
-    display: none;
-}
-
-#sobremi.activo,
-#proyectos.activo,
-#skills.activo,
-#contacto.activo {
-    display: block;
-}
-
-/* ===== Footer ===== */
 .footer {
     width: 100%;
     text-align: right;
@@ -405,7 +639,6 @@ img {
     font-size: .8rem;
 }
 
-/* ===== Responsive ===== */
 @media (max-width: 1024px) {
     .estadistica {
         width: 50%;
@@ -413,6 +646,10 @@ img {
 
     .habilidades__contenedor {
         width: 70%;
+    }
+
+    .proyectos__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
@@ -439,6 +676,7 @@ img {
         width: 90%;
         flex-direction: column;
         align-items: center;
+        padding-left: 0;
     }
 
     .estadistica__item {
@@ -459,15 +697,7 @@ img {
     .informacion__contenido {
         width: 90%;
         margin-left: 0;
-    }
-
-    .habilidades__contenedor {
-        width: 90%;
-        grid-template-columns: 1fr;
-    }
-
-    .habilidades__columna {
-        grid-template-columns: 1fr 1fr;
+        min-height: auto;
     }
 
     .informacion__items {
@@ -479,6 +709,47 @@ img {
     .informacion__item {
         width: 80%;
         max-width: 300px;
+    }
+
+    .habilidades__contenedor {
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+
+    .habilidades__columna {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .proyectos {
+        width: 90%;
+    }
+
+    .modal__box {
+        width: 92vw;
+        height: auto;
+        max-height: 90vh;
+        margin: 5vh auto;
+        border-radius: 18px;
+    }
+
+    .modal__content {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .modal__left {
+        height: 34vh;
+    }
+
+    .modal__right {
+        max-height: calc(90vh - 34vh);
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .proyectos__grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -504,10 +775,6 @@ img {
         font-size: 1rem;
     }
 
-    .informacion__contenido {
-        min-height: auto;
-    }
-
     .habilidades__item {
         margin-left: 20px;
     }
@@ -515,56 +782,4 @@ img {
     .footer {
         text-align: center;
     }
-}
-
-/* ===== Fondo de BEAMS diagonales sutil en toda la página ===== */
-#beams {
-    position: fixed;
-    inset: 0;
-    /* cubre toda la pantalla */
-    pointer-events: none;
-    /* no bloquea clics */
-    z-index: 0;
-    /* detrás del contenido */
-    /* 3 beams: lavanda, rosa, celeste */
-    background:
-        linear-gradient(135deg, rgba(179, 136, 235, 0.14) 0%, rgba(179, 136, 235, 0.0) 65%),
-        linear-gradient(225deg, rgba(255, 145, 185, 0.14) 0%, rgba(255, 145, 185, 0.0) 65%),
-        linear-gradient(45deg, rgba(0, 174, 238, 0.14) 0%, rgba(0, 174, 238, 0.0) 65%);
-    background-size: 200% 200%;
-    animation: beams-breathe 58s ease-in-out infinite;
-    /* Suavizado extra (opcional): desenfoque muy leve */
-    filter: saturate(110%);
-}
-
-/* Respiración lentísima del fondo */
-@keyframes beams-breathe {
-    0% {
-        background-position: 0% 0%, 100% 100%, 0% 100%;
-    }
-
-    50% {
-        background-position: 100% 100%, 0% 0%, 100% 0%;
-    }
-
-    100% {
-        background-position: 0% 0%, 100% 100%, 0% 100%;
-    }
-}
-
-/* Respeta accesibilidad */
-@media (prefers-reduced-motion: reduce) {
-    #beams {
-        animation: none;
-    }
-}
-
-/* Por si algún elemento tapa los beams, asegúrate de que tu contenido esté por encima */
-main,
-header,
-footer,
-.container,
-body>*:not(#beams) {
-    position: relative;
-    z-index: 1;
 }

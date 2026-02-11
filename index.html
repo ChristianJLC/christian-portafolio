@@ -37,11 +37,11 @@
     </section>
     <section class="estadistica">
         <div class="estadistica__item">
-            <h2 class="estadistica__numero">10</h2>
+            <h2 class="estadistica__numero">9</h2>
             <p class="estadistica__descripcion">Ciclo Ingenieria Sistemas</p>
         </div>
         <div class="estadistica__item">
-            <h2 class="estadistica__numero">2</h2>
+            <h2 class="estadistica__numero">4</h2>
             <p class="estadistica__descripcion">Proyectos completos</p>
         </div>
         <div class="estadistica__item">
@@ -81,12 +81,12 @@
                     <div class="informacion__item">
                         <i class="fa-solid fa-graduation-cap"></i>
                         <h3>Carrera</h3>
-                        <p>10° Ciclo</p>
+                        <p>9° Ciclo</p>
                     </div>
                     <div class="informacion__item">
                         <i class="fa-solid fa-briefcase"></i>
                         <h3>Completado</h3>
-                        <p>+2 Proyectos</p>
+                        <p>+5 Proyectos</p>
                     </div>
                     <div class="informacion__item">
                         <i class="fa-solid fa-headset"></i>
@@ -105,8 +105,192 @@
     </section>
 
     <section class="proyectos" id="proyectos">
-        <h2>Mis Proyectos</h2>
-        <br><br><br><br><br><br><br><br><br><br>
+        <h2 class="informacion__titulo">trabajos y proyectos</h2>
+        <h3 class="informacion__subtitulo">Proyectos</h3>
+        <div class="proyectos__grid">
+            <article class="proyecto" data-modal="modalCoffe"
+                data-images="proyectos/thecoffeshop/coffemodal1.png|proyectos/thecoffeshop/coffemodal2.png|proyectos/thecoffeshop/coffemodal3.png|proyectos/thecoffeshop/coffemodal4.png|proyectos/thecoffeshop/coffemodal5.png">
+                <div class="proyecto__thumb">
+                    <img src="proyectos/thecoffeshop/coffe1.jpeg" alt="The Coffee Shop">
+                </div>
+
+                <div class="proyecto__body">
+                    <h3 class="proyecto__nombre">The Coffee Shop</h3>
+                    <p class="proyecto__desc">
+                        web full stack con flujo completo de compras: Producto, carrito, Checkout.
+                    </p>
+
+                    <ul class="proyecto__tags">
+                        <li>Node.js</li>
+                        <li>PostgreSQL</li>
+                        <li>Html</li>
+                        <li>...</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="proyecto" data-modal="modalInventario"
+                data-images="proyectos/inventario/inventariomodal1.png|proyectos/inventario/inventariomodal2.png|proyectos/inventario/inventariomodal3.png|proyectos/inventario/inventariomodal4.png|proyectos/inventario/inventariomodal5.png">
+                <div class="proyecto__thumb">
+                    <img src="proyectos/inventario/inventario1.jpeg" alt="inventario">
+                </div>
+
+                <div class="proyecto__body">
+                    <h3 class="proyecto__nombre">Web de inventario</h3>
+                    <p class="proyecto__desc">
+                        Inventario UX/UI con credenciales, dashboard y gestión de productos.
+                    </p>
+
+                    <ul class="proyecto__tags">
+                        <li>UX/UI</li>
+                        <li>Tailwind</li>
+                        <li>Node.js</li>
+                        <li>...</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="proyecto" data-modal="modalReserva"
+                data-images="proyectos/reserva/reserva1.jpeg|proyectos/reserva/reservamodal2.jpeg|proyectos/reserva/reservamodal3.jpeg|proyectos/reserva/reservamodal4.jpeg|proyectos/reserva/reservamodal5.jpeg">
+                <div class="proyecto__thumb">
+                    <img src="proyectos/reserva/reserva1.jpeg" alt="Reservación de salas">
+                </div>
+
+                <div class="proyecto__body">
+                    <h3 class="proyecto__nombre">Reservación de salas</h3>
+                    <p class="proyecto__desc">
+                        API Rest para reservas de sales con autenticacion JWT.
+                    </p>
+
+                    <ul class="proyecto__tags">
+                        <li>Node.js</li>
+                        <li>Firebase</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+        <br>
+        <br>
+        <br>
+        <!--MODALES-->
+        <div class="modal" id="modalCoffe">
+            <div class="modal__overlay"></div>
+
+            <div class="modal__box">
+                <button class="modal__close" type="button" aria-label="Cerrar">×</button>
+
+                <div class="modal__content">
+                    <div class="modal__left">
+                        <button class="carousel__btn carousel__prev" type="button" aria-label="Anterior">‹</button>
+
+                        <img class="carousel__img" src="proyectos/thecoffeshop/coffemodal1.png" alt="The Coffee Shop">
+
+                        <button class="carousel__btn carousel__next" type="button" aria-label="Siguiente">›</button>
+
+                        <div class="carousel__dots"></div>
+                    </div>
+
+                    <div class="modal__right">
+                        <h3 class="modal__titulo">The Coffee Shop</h3>
+
+                        <p class="modal__descripcion">
+                            Proyecto full stack orientado a e-commerce gastronómico. Incluye flujo completo de compras,
+                            autenticación, carrito persistente y checkout optimizado.
+                        </p>
+
+                        <p class="modal__descripcion">
+                            El sistema permite gestionar productos, categorías y pedidos desde el lado administrativo.
+                        </p>
+
+                        <h4 class="modal__subtitulo">Tecnologías</h4>
+                        <ul class="modal__tech">
+                            <li>Node.js</li>
+                            <li>PostgreSQL</li>
+                            <li>Express</li>
+                            <li>HTML / CSS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="modalInventario">
+            <div class="modal__overlay"></div>
+
+            <div class="modal__box">
+                <button class="modal__close" type="button" aria-label="Cerrar">×</button>
+
+                <div class="modal__content">
+                    <div class="modal__left">
+                        <button class="carousel__btn carousel__prev" type="button" aria-label="Anterior">‹</button>
+
+                        <img class="carousel__img" src="proyectos/inventario/inventariomodal1.png" alt="Inventario">
+
+                        <button class="carousel__btn carousel__next" type="button" aria-label="Siguiente">›</button>
+
+                        <div class="carousel__dots"></div>
+                    </div>
+
+                    <div class="modal__right">
+                        <h3 class="modal__titulo">Web de inventario</h3>
+
+                        <p class="modal__descripcion">
+                            Proyecto orientado a inventario con autenticación, dashboard y gestión de productos.
+                        </p>
+
+                        <p class="modal__descripcion">
+                            Permite administrar productos, proveedores, categorías y ventas desde un panel.
+                        </p>
+
+                        <h4 class="modal__subtitulo">Tecnologías</h4>
+                        <ul class="modal__tech">
+                            <li>Node.js</li>
+                            <li>PostgreSQL</li>
+                            <li>Express</li>
+                            <li>HTML / CSS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="modalReserva">
+            <div class="modal__overlay"></div>
+
+            <div class="modal__box">
+                <button class="modal__close" type="button" aria-label="Cerrar">×</button>
+
+                <div class="modal__content">
+                    <div class="modal__left">
+                        <button class="carousel__btn carousel__prev" type="button" aria-label="Anterior">‹</button>
+
+                        <img class="carousel__img" src="proyectos/reserva/reserva1.jpeg" alt="Reservación de salas">
+
+                        <button class="carousel__btn carousel__next" type="button" aria-label="Siguiente">›</button>
+
+                        <div class="carousel__dots"></div>
+                    </div>
+
+                    <div class="modal__right">
+                        <h3 class="modal__titulo">Reservación de salas</h3>
+
+                        <p class="modal__descripcion">
+                            API REST para gestionar reservas con autenticación JWT y control de acceso.
+                        </p>
+
+                        <p class="modal__descripcion">
+                            Permite crear salas, usuarios y reservas, validando disponibilidad y permisos.
+                        </p>
+
+                        <h4 class="modal__subtitulo">Tecnologías</h4>
+                        <ul class="modal__tech">
+                            <li>Node.js</li>
+                            <li>Express</li>
+                            <li>Firebase</li>
+                            <li>JWT</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="habilidades" id="skills">
@@ -125,7 +309,7 @@
                     <h3>CSS</h3><span>Intermedio</span>
                 </div>
                 <div class="habilidades__item"><i class="fa-brands fa-figma"></i>
-                    <h3>Figma</h3><span>Intermedio</span>
+                    <h3>Figma</h3><span>Basico</span>
                 </div>
                 <div class="habilidades__item"><i class="fa-brands fa-js"></i>
                     <h3>JavaScript</h3><span>Intermedio</span>
@@ -156,6 +340,7 @@
             </div>
         </div>
     </section>
+
     <section class="formulario" id="contacto">
         <h2 class="formulario__titulo">Contáctame</h2>
         <form class="formulario__form" id="form">
@@ -168,8 +353,9 @@
             <input type="submit" id="button" class="formulario__boton" value="Enviar">
         </form>
     </section>
+
     <footer class="footer">
-        <p class="footer__texto">© 2025 Christian Lazaro. Todos los derechos reservados.</p>
+        <p class="footer__texto">© 2026 Christian Lazaro. Todos los derechos reservados.</p>
     </footer>
     <script src="script.js"></script>
 </body>
