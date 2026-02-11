@@ -694,6 +694,11 @@ img {
         margin: 0 auto 20px;
     }
 
+    .informacion__img img {
+        width: min(230px, 100%);
+        margin: 0 auto;
+    }
+
     .informacion__contenido {
         width: 90%;
         margin-left: 0;
